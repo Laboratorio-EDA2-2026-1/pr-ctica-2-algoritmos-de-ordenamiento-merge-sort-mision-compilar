@@ -34,11 +34,13 @@ void merge(int arr[], int left, int mid, int right);
 
 int main() {
     int n;
+    printf("Ingresa el tamaño de tu arreglo nxn\n");
     scanf("%d", &n);  // Leer el número de arreglos
 
     int total = n * n;  
     int *arr = (int *)malloc(total * sizeof(int));
 
+    printf("Ingresa los valores\n");
     // Leer n arreglos de tamaño n
     for (int i = 0; i < total; i++) {
         scanf("%d", &arr[i]);
@@ -47,6 +49,7 @@ int main() {
     // Ordenar usando merge sort
     mergeSort(arr, 0, total - 1);
 
+    printf("Aqui esta tu arreglo ordenado\n");
     // Imprimir el arreglo ordenado
     for (int i = 0; i < total; i++) {
         printf("%d ", arr[i]);
